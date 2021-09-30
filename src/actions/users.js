@@ -1,4 +1,4 @@
-import { getUsers, newUser } from '../services/usersService';
+import { getUsers } from '../services/usersService';
 import { successMessage } from './../utils/message';
 
 export const getAllUsers = () => {
@@ -11,7 +11,7 @@ export const getAllUsers = () => {
 
 
 export const createNewUsers = (user) => {
- 
+
     return async (dispatch, getState) => {
         // const { data, status } = await newUser(user);
         // const users = [...getState().users];
@@ -19,7 +19,7 @@ export const createNewUsers = (user) => {
         //     (user) => user.id !== userId
         // );
 
-        const users = [...getState()];
+        // const users = [...getState()];
         // if (status === 201)
         await dispatch({
             type: "ADD_USER",
